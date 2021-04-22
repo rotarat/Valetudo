@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="chartData"
+            type="bg.valetudo.mobile.model.other.daily.ChartData"/>
+    </data>
+    <com.github.lzyzsd.circleprogress.ArcProgress
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        bind:b_arc_progress="@{chartData.arcProgressPercent}"
+        bind:b_arc_bottom_text="@{chartData.arcBottomText}"
+        app:arc_finished_color="@color/grass_green"
+        app:arc_unfinished_color="@color/white"
+        app:arc_text_color="@color/grass_green"
+        app:arc_bottom_text_size="20dp"/>
+</layout>

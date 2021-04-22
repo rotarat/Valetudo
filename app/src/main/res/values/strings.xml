@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Valetudo</string>
+    <string name="title_overview">Overview</string>
+    <string name="title_sport">Sport Activity</string>
+    <string name="title_charts">Charts</string>
+    <string name="title_profile">Profile</string>
+
+    <!-- LOGIN -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <!-- REGISTER -->
+    <string name="login">Log in</string>
+    <string name="forgotten_password">Don\'t remember password?</string>
+    <string name="email_address">Email address</string>
+    <string name="repeat_password">Confirm password</string>
+    <string name="options">Select desired options.</string>
+    <string name="finish">Finish!</string>
+    <string name="get_started">Get started!</string>
+    <string name="sign_up_login">Don\'t have an account? <u>Sign up!</u></string>
+    <string name="back_to_login">Already a user? <u>Log in!</u></string>
+    <string name="thanking_text">Thank you for choosing <center><br>Valetudo!</br></center></string>
+    <string name="tell_us_more">Tell us more about yourself..</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="circumference">Circumference of:</string>
+    <string name="waist">Waist</string>
+    <string name="hip">Hip</string>
+    <string name="left_thigh">Left thigh</string>
+    <string name="right_thigh">Right thigh</string>
+    <string name="right_arm">Right arm</string>
+    <string name="left_arm">Left arm</string>
+    <string name="calories">Calories goal</string>
+    <string name="joke">What is a nerdy alligator’s favorite programming language? Jaw-va.</string>
+    <string name="choose">Choose…</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+
+    <string name="next">Next</string>
+    <string name="add_body_measurments">To create you a goal, we need your body measurments.</string>
+
+    <!-- HOME -->
+    <string name="welcome_message">Welcome to Valetudo!</string>
+
+    <!-- MODULES -->
+    <string name="m_food_beverage">Food and Beverage</string>
+    <string name="m_workout">Workouts</string>
+    <string name="m_sleep">Sleep</string>
+
+    <!-- FOOD -->
+    <string name="title_food">Food</string>
+    <string name="ds_daily_goal">Daily calories goal</string>
+
+    <!-- BEVERAGE -->
+    <string name="title_beverage">Beverage</string>
+</resources>

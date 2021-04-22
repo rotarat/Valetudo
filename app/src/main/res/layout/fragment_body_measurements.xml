@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="bg.valetudo.mobile.ui.register.measurements.RegisterMeasurementsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/add_body_measurments"
+                android:textColor="@color/clear_water"
+                android:textSize="25sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/measure_icon">
+
+            </ImageView>
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/clear_water" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/female_pic">
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="20dp"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/circumference"
+                    android:textSize="18sp"
+                    android:textColor="@color/clear_water">
+                </EditText>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="@string/waist"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water"
+                    android:text="@={viewModel.userDataObservable.waist}"
+                    android:padding="16dp">
+                </EditText>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/hip"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water"
+                    android:text="@={viewModel.userDataObservable.hip}"
+                    android:padding="16dp">
+                </EditText>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/right_arm"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water"
+                    android:text="@={viewModel.userDataObservable.rightArm}"
+                    android:padding="16dp">
+                </EditText>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/left_arm"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water"
+                    android:text="@={viewModel.userDataObservable.leftArm}"
+                    android:padding="16dp">
+                </EditText>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/right_thigh"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water"
+                    android:text="@={viewModel.userDataObservable.rightThigh}"
+                    android:padding="16dp">
+                </EditText>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/left_thigh"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water"
+                    android:text="@={viewModel.userDataObservable.leftThigh}"
+                    android:padding="16dp">
+                </EditText>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/calories"
+                    android:inputType="number"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water"
+                    android:text="@={viewModel.userDataObservable.goalFood}"
+                    android:padding="16dp">
+                </EditText>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#177DB46C"
+            android:padding="16dp"
+            android:text="@string/finish"
+            android:onClick="@{() -> viewModel.onFinishClick()}"
+            android:textColor="@color/clear_water"
+            android:textSize="16sp" />
+    </LinearLayout>
+</layout>

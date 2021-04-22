@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="bg.valetudo.mobile.ui.register.generalinfo.RegisterGeneralInfoViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/thanking_text"
+                android:textColor="@color/clear_water"
+                android:textSize="26sp"
+                android:textStyle="bold">
+
+            </EditText>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/happy_face" >
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="610dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="22dp"
+                android:text="@string/tell_us_more"
+                android:textColor="@color/clear_water"
+                android:textSize="20sp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="287dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="@string/age"
+                    android:inputType="number"
+                    android:padding="16dp"
+                    android:text="@={viewModel.userDataObservable.age}"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water">
+
+                </EditText>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/age_icon">
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/gender_spinner"
+                    android:layout_width="287dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:textColor="@color/clear_water"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gender_icon"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="287dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="@string/weight"
+                    android:inputType="numberDecimal"
+                    android:padding="16dp"
+                    android:text="@={viewModel.userDataObservable.weight}"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water">
+
+                </EditText>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/weight_icon">
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="287dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/et_bg"
+                    android:hint="@string/height"
+                    android:inputType="numberDecimal"
+                    android:padding="16dp"
+                    android:text="@={viewModel.userDataObservable.height}"
+                    android:textColor="@color/clear_water"
+                    android:textColorHint="@color/clear_water">
+
+                </EditText>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/height_icon">
+                </ImageView>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#177DB46C"
+                android:onClick="@{() -> viewModel.onNextClick()}"
+                android:padding="16dp"
+                android:text="@string/next"
+                android:textColor="@color/clear_water"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
